@@ -1,0 +1,111 @@
+<style> 
+        input {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px solid rgba(218, 146, 12, 0.664);
+            outline: none;
+            color: #ff6600;
+        }
+        input:focus {
+            background-color: lightblue;
+        }
+        div {
+          text-align: center;
+        }
+        label {
+          display: inline-block;
+          width: 140px;
+          text-align: right;
+        }
+      </style>
+      
+<div>
+  <h3>Add Page</h3>
+  <p>&nbsp;</p>
+  <form>      
+    <!--
+    <div class="form-group">
+      <label for="grade">Grade:</label>
+      <input type="number" ng-model="grade" id="grade" placeholder="Current grade (9th/10th/11th/12th)"><br>
+    </div>
+    -->
+
+    <div class="form-group">
+      <label for="grade">Grade:</label>
+      <select name="grade" id="grade" ng-model="grade">
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+      </select><br>
+    </div>
+
+    <!--
+    <div class="form-group">
+      <label for="school">School:</label>
+      <input type="text" ng-model="school" id="school" placeholder="High school name"><br>
+    </div>
+    -->
+    <div class="form-group">
+      <label for="school">School:</label>
+      <select name="school" id="school" ng-model="school">
+          <option value="California High School">California High School</option>
+          <option value="Dougherty Valley High School">Dougherty Valley High School</option>
+          <option value="Monte Vista High School">Monte Vista High School</option>
+          <option value="San Ramon Valley High School">San Ramon Valley High School</option>
+      </select><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" ng-model="name" id="name" placeholder="Student name"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="interest">Interest:</label>
+      <input type="text" ng-model="interest" id="interest" placeholder="Academic interest / intended major"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="GPA9th">9th GPA: </label>
+      <input type="number" ng-model="GPA9th" id="GPA9th" placeholder="9th Grade GPA"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="GPA10th">10th GPA: </label>
+      <input type="number" ng-model="GPA10th" id="GPA10th" placeholder="10th Grade GPA"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="GPA11th">11th GPA: </label>
+      <input type="number" ng-model="GPA11th" id="GPA11th" placeholder="11th Grade GPA"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="GPA12th">12th GPA:</label>
+      <input type="number" ng-model="GPA12th" id="GPA12th" placeholder="12th Grade GPA"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="volunteer">Volunteer Hours:</label>
+      <input type="number" ng-model="volunteer" id="volunteer" placeholder="Hours commited to volunteer"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="Leadership">Leadership Hours:</label>
+      <input type="number" ng-model="leadership" id="leadership" placeholder="Hours commited to leadership"><br>
+    </div>
+    
+    <div class="form-group">
+      <label for="activity">Activity Hours:</label>
+      <input type="number" ng-model="activity" id="activity" placeholder="Hours committed to activities/clubs"><br>
+    </div>
+  </form>
+
+  <a ng-click="addStudent()">Add</a>
+  <a href="#/">Cancel</a>
+
+</div>
+      

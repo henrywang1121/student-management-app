@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="services/http-service.js"></script>
+  </head> 
+  <body ng-controller="homeController">
+    <header>
+      <nav class="navbar">
+        <p></p>
+        <a href="#/" style="display:block">&nbsp <b>Home</b></a>
+        <a href="#/add" style="display:block">&nbsp <b>Add a Student</b></a>
+        <a href="#/map" style="display:block">&nbsp <b>Map Schools</b></a>
+      </nav>
+    </header>
+     
+    <div id="main">
+        <div ng-view>
+          <!-- content will be injected here -->     
+        </div>
+    </div>
+  </body>
+</html>

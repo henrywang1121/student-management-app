@@ -1,0 +1,48 @@
+<style>
+  ul {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgba(218, 146, 12, 0.664);
+  }
+  div h3 {
+    text-align: center;
+  }
+  label {
+    width: 50%;
+    text-align: right;
+  }
+</style>
+
+<div>
+  <h3>Home Page</h3>
+  <p>&nbsp;</p>
+
+  <div>
+    <label for="sort">Order By:</label>
+    <select name="sort" id="sort" ng-model="sortStudents">
+      <option value="alphabetical">Alphabetical</option>
+      <option value="school">School</option>
+      <option value="grade">Grade</option>
+    </select><br>
+  </div>
+
+  <div>
+    <ul class="list-group">
+      <li ng-repeat="student in students" class="list-group-item">
+        <a ng-href="#/student/{{$index}}"><h4>{{student.name}}</h3></a>
+        <p><b>Grade:</b> {{student.grade}}</p>
+        <p><b>School:</b> {{student.school}}</p>
+        <p><b>Interest:</b> {{student.interest}}</p>
+          <button class="remove" ng-click="removeStudent($index)">Remove</button>
+      </li>
+      <div style="text-align: center;">
+        <p></p>
+        <a ng-href="#/add">Add a Student</a>
+      </div>
+      <div style="text-align: right;">
+          <p><b>Total Students: </b> {{length}} &nbsp</p>
+      </div>
+    </ul>
+  </div>
+</div>
