@@ -1,25 +1,35 @@
 <style> 
-        input {
-            width: 50%;
-            padding: 12px 20px;
-            margin: 0 auto;
-            box-sizing: border-box;
-            border: 1px solid rgba(218, 146, 12, 0.664);
-            outline: none;
-            color: #ff6600;
-        }
-        input:focus {
-            background-color: lightblue;
-        }
-        div {
-          text-align: center;
-        }
-        label {
-          display: inline-block;
-          width: 140px;
-          text-align: right;
-        }
-      </style>
+  input {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      border: 2px solid rgba(218, 146, 12, 0.664);
+      outline: none;
+      color: #ff6600;
+  }
+  input:focus {
+      background-color: lightblue;
+  }
+  div {
+    text-align: center;
+  }
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+  }
+  .form-group {
+    text-align: left;
+    margin-left: 100px;
+  }
+  a, a:hover {
+    color: orange;
+  }
+  button {
+    width: 120px;
+  }
+</style>
       
 <div>
   <h3>Add Page</h3>
@@ -104,8 +114,8 @@
     </div>
   </form>
 
-  <a ng-click="addStudent()">Add</a>
-  <a href="#/">Cancel</a>
-
+  <button type="button" class="btn btn-primary"><a ng-click="addStudent()">Add</a></button>
+  <button type="button" class="btn btn-primary"><a href="#/">Cancel</a></button>
+  <p></p>
 </div>
       

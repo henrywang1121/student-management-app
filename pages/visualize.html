@@ -2,11 +2,20 @@
   h3 {
     text-align: center;
   }
-  div {
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+  #profile {
+    margin-left: 20%;
   }
+
+  #visualize {
+    float: right;
+    margin-right: 30%;
+  }
+
+  .pie {
+    margin: 0px 40%;
+  }
+
+
 </style>  
 
 <div>
@@ -15,32 +24,32 @@
   
   <section id="profile">
 
-  </section>
-  <p>&nbsp;</p>
-  
-  <svg width="800" height="200">
-    <g>
-      <rect width="{{GPA9th*100}}" height="30" style="fill:rgb(160, 220, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
-      <text x="10" y="0" dy="1em">9th Grade GPA: {{GPA9th == 0 ? "Not Available" : GPA9th}}</text>
-    </g>
-    <g>
-      <rect width="{{GPA10th*100}}" height="30" y="35" style="fill:rgb(240,180, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
-      <text x="10" y="35" dy="1em">10th Grade GPA: {{GPA10th == 0 ? "Not Available" : GPA10th}}</text>
-    </g>
-    <g>
-      <rect width="{{GPA11th*100}}" height="30" y="70" style="fill:rgb(240, 100, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
-      <text x="10" y="70" dy="1em">11th Grade GPA: {{GPA11th == 0 ? "Not Available" : GPA11th}}</text>
-    </g>
-    <g>
-      <rect width="{{GPA12th*100}}" height="30" y="105" style="fill:rgb(240, 60, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
-      <text x="10" y="105" dy="1em">12th Grade GPA: {{GPA12th == 0 ? "Not Available" : GPA12th}}</text>
-    </g>
-    <g>
-      <rect width="{{averageGPA*100}}" height="30" y="140" style="fill:rgb(135, 193, 231);stroke-width:2;stroke:rgb(0,0,0)"></rect>
-      <text x="10" y="140" dy="1em">Average GPA: {{averageGPA == 0 || isNaN(averageGPA) ? "Not Available" : averageGPA}} </text>
-    </g>
-  </svg>
 
-  <p></p>
-  <canvas id="testCanvas" width="500" height="500"> </canvas>
+    <svg id="visualize" width="400" height="200">
+      <g>
+        <rect width="{{GPA9th*100}}" height="30" style="fill:rgb(160, 220, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
+        <text x="10" y="0" dy="1em">9th Grade GPA: {{GPA9th == 0 ? "Not Available" : GPA9th}}</text>
+      </g>
+      <g>
+        <rect width="{{GPA10th*100}}" height="30" y="35" style="fill:rgb(240,180, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
+        <text x="10" y="35" dy="1em">10th Grade GPA: {{GPA10th == 0 ? "Not Available" : GPA10th}}</text>
+      </g>
+      <g>
+        <rect width="{{GPA11th*100}}" height="30" y="70" style="fill:rgb(240, 100, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
+        <text x="10" y="70" dy="1em">11th Grade GPA: {{GPA11th == 0 ? "Not Available" : GPA11th}}</text>
+      </g>
+      <g>
+        <rect width="{{GPA12th*100}}" height="30" y="105" style="fill:rgb(240, 60, 0);stroke-width:2;stroke:rgb(0,0,0)"></rect>
+        <text x="10" y="105" dy="1em">12th Grade GPA: {{GPA12th == 0 ? "Not Available" : GPA12th}}</text>
+      </g>
+      <g>
+        <rect width="{{averageGPA*100}}" height="30" y="140" style="fill:rgb(135, 193, 231);stroke-width:2;stroke:rgb(0,0,0)"></rect>
+        <text x="10" y="140" dy="1em">Average GPA: {{averageGPA == 0 || isNaN(averageGPA) ? "Not Available" : averageGPA}} </text>
+      </g>
+    </svg>
+  </section>
+
+  <div class="pie">
+    <canvas id="testCanvas" width="400" height="500"> </canvas>
+  </div>
 </div>

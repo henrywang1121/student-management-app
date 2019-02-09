@@ -19,6 +19,16 @@
     width: 140px;
     text-align: right;
   }
+  .form-group {
+          text-align: left;
+          margin-left: 100px;
+        }
+  a, a:hover {
+    color: orange;
+  }
+  button {
+    width: 120px;
+  }
 </style>
 
 <div>
@@ -105,7 +115,8 @@
     </div>
   </form>
 
-  <a href="#/visualize/{{index}}">Visualize</a>
-  <a ng-click="saveStudent(index)">Save</a>
-  <a href="#/">Cancel</a>
+  <button type="button" class="btn btn-primary"><a href="#/visualize/{{index}}">Visualize</a></button>
+  <button type="button" class="btn btn-primary"><a ng-click="saveStudent(index)">Save</a></button>
+  <button type="button" class="btn btn-primary"><a href="#/">Cancel</a></button>
+  <p></p>
 </div>

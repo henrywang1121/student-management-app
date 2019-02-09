@@ -1,9 +1,9 @@
 <style>
-  ul {
+  .list-group li {
     width: 50%;
     margin-right: auto;
     margin-left: auto;
-    border: 1px solid rgba(218, 146, 12, 0.664);
+    border: 2px solid rgba(218, 146, 12, 0.664);
   }
   div h3 {
     text-align: center;
@@ -12,13 +12,20 @@
     width: 50%;
     text-align: right;
   }
+  
+  a, a:hover {
+    color: orange;
+  }
+  button {
+    width: 120px;
+  }
 </style>
 
 <div>
   <h3>Home Page</h3>
   <p>&nbsp;</p>
 
-  <div>
+  <div class="order">
     <label for="sort">Order By:</label>
     <select name="sort" id="sort" ng-model="sortStudents">
       <option value="alphabetical">Alphabetical</option>
@@ -38,7 +45,7 @@
       </li>
       <div style="text-align: center;">
         <p></p>
-        <a ng-href="#/add">Add a Student</a>
+        <button type="button" class="btn btn-primary"><a ng-href="#/add">Add a Student</a></button>
       </div>
       <div style="text-align: right;">
           <p><b>Total Students: </b> {{length}} &nbsp</p>

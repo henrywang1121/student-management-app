@@ -2,6 +2,8 @@
 <html ng-app="myApp">
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/angular-route.js"></script>
     <script src="js/scripts.js"></script>
@@ -9,12 +11,20 @@
   </head> 
   <body ng-controller="homeController">
     <header>
-      <nav class="navbar">
-        <p></p>
-        <a href="#/" style="display:block">&nbsp <b>Home</b></a>
-        <a href="#/add" style="display:block">&nbsp <b>Add a Student</b></a>
-        <a href="#/map" style="display:block">&nbsp <b>Map Schools</b></a>
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">Student Mangement</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a href="#/add">Add a Student</a></li>
+            <li><a href="#/map">Map Schools</a></li>
+          </ul>
+        </div>
       </nav>
+
     </header>
      
     <div id="main">
